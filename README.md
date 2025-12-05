@@ -21,6 +21,7 @@ A Terraform-based lab environment demonstrating **Port Address Translation (PAT)
                     │           │
              nic0   │           │  nic1
           10.1.1.2  │           │  10.1.2.2
+          BLUE VPC  │           │  RED VPC
                     │           │
           ┌─────────┘           └─────────┐
           │                               │
@@ -38,7 +39,7 @@ A Terraform-based lab environment demonstrating **Port Address Translation (PAT)
 | `:8081` | `10.1.1.3:80` | Blue banner |
 | `:8082` | `10.1.2.3:80` | Red banner |
 
-The PAT firewall VM uses `iptables` DNAT rules to forward incoming traffic on different ports to separate internal web servers on isolated subnets.
+The PAT firewall VM uses `iptables` DNAT rules to forward incoming traffic on different ports to separate internal web servers on isolated VPCs. The dual-NIC design requires separate VPCs in GCP.
 
 ## Prerequisites
 
