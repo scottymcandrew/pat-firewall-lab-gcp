@@ -1,0 +1,12 @@
+# Copy this file to terraform.tfvars and fill in your values
+
+# Required: Your GCP project ID
+project_id = "your-gcp-project-id"
+
+# Optional: Override defaults if needed
+# region = "europe-west2"
+# zone   = "europe-west2-a"
+
+# Optional: Customize ports
+# blue_port = 8081
+# red_port  = 8082
